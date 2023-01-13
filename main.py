@@ -363,6 +363,24 @@ def homepageUI():
                 ctk.CTkLabel(tabview.tab("Şifrelerim"), text=f"{uygulama}", font=commFont, fg_color='#579BB1', corner_radius=50).place(x=30, y=yDeger)
                 ctk.CTkLabel(tabview.tab("Şifrelerim"), text=f"{hesapAdi}", font=commFont).place(x=160, y=yDeger)
                 ctk.CTkLabel(tabview.tab("Şifrelerim"), text=f"{sifre}", font=commFont).place(x=290, y=yDeger)
+                
+        def yenile():
+                global uyeID
+                imlec.execute(f"SELECT uygulama_adi, hesap_adi, hesap_sifresi FROM sifreler_Tablosu WHERE uye_id = '{uyeID}'")
+                sonuc = imlec.fetchall()
+                arttırma = 1
+                for i in sonuc:
+                        arttırma += 3
+                        yDeger = 80 + (arttırma * 10) 
+                        uygulama = i[0]
+                        hesapAdi = i[1]
+                        sifre=i[2]
+
+                        ctk.CTkLabel(tabview.tab("Şifrelerim"), text=f"{uygulama}", font=commFont, fg_color='#579BB1', corner_radius=50).place(x=30, y=yDeger)
+                        ctk.CTkLabel(tabview.tab("Şifrelerim"), text=f"{hesapAdi}", font=commFont).place(x=160, y=yDeger)
+                        ctk.CTkLabel(tabview.tab("Şifrelerim"), text=f"{sifre}", font=commFont).place(x=290, y=yDeger)
+
+        ctk.CTkButton(tabview.tab("Şifrelerim"), text="Yenile", font=headerFont, width=50, command=yenile).place(x=10, y=600)
 
         
         # Şifre Oluştur görünümü
