@@ -12,8 +12,8 @@ import pyodbc
 # *!Veritabanı Bağlantısı
 db = pyodbc.connect(
         'Driver={SQL Server};'
-        'Server=LAPTOP-FQCS45JV;'
-        'Database=password_manager;'
+        'Server=SERVERNAME;'
+        'Database=DBNAME;'
         'Trusted_Connection=True;'
 )
 
