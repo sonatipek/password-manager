@@ -6,7 +6,11 @@ Veritabanı bağlantısı MSSQL'ile oluşturuldu. Henüz girişte tablo ve db ol
 
 Kullanıcıların MSSQL'e şifrelerini kaydederek kullanabilecekleri bir uygulama. Kullanıcı arayüzü customtkinter ile oluşturuldu.
 
-##Gereklilikler
+## Gereklilikler
 MSSQL
 tkinter
 customtkinter
+
+## Özellikler
+- şifre oluşturucu
+- email kontrol modülü kullanıldı
